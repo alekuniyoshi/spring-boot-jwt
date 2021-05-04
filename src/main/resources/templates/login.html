@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout :: head"></head>
+<body>
+	<header th:replace="layout/layout :: header"></header>
+
+	<div class="container py-4">
+
+		<div class="card border-primary">
+			<div class="card-header">Please Sign in</div>
+			<div class="card-body">
+
+				<form th:action="@{/login}" method="post">
+
+					<div class="from-group col-sm-6">
+						<input type="text" name="username" class="form-control"
+							placeholder="username" required autofocus />
+					</div>
+					<div class="from-group col-sm-6">
+						<input type="password" name="password" class="form-control"
+							placeholder="password" required />
+					</div>
+					<div class="from-group col-sm-6">
+						<input type="submit"  class="btn btn-secondary" 
+							value="Sign In" />
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
